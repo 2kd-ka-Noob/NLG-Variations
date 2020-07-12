@@ -1,0 +1,31 @@
+
+
+template-macro-def (FORGOT_INPUT){
+	content{
+		choose (Random){
+			template ("You forgot to say what you wanted to say, #{macro('NO_CONFIRMATION')}.")
+			template ("[All you said was \"#{value(confirmation)}\", ]#{macro('NO_CONFIRMATION')}.")
+			template ("Don't forget to include your message! #{title(macro('NO_CONFIRMATION'))}.")
+		}
+	}
+}
+
+template-macro-def (CONFIRMATION){
+	content{
+		choose (Random){
+			template ("Hi  ")
+			template (" Hello")
+			template ("Hey  ")
+		}
+	}
+}
+
+template-macro-def (NO_CONFIRMATION){
+	content{
+		choose (Random){
+			template ("over and out")
+			template ("over")
+			template ("out")
+		}
+	}
+}
